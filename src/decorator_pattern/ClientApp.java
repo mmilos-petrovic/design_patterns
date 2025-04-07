@@ -1,6 +1,6 @@
 package decorator_pattern;
 
-public class MainApp {
+public class ClientApp {
     public static void main(String[] args){
         Car fiat = new Fiat();
         fiat = new MetalicCarDecorator(fiat);

@@ -1,12 +1,11 @@
 package command_pattern;
 
-import command_pattern.commands.Command;
 import command_pattern.commands.LightOnCommand;
 import command_pattern.commands.LightOffCommand;
 import command_pattern.invokers.FourButtonsRemote;
 import command_pattern.receivers.Light;
 
-public class MainApp{
+public class ClientApp {
     static public void main(String[] args){
         Light l = new Light("Kitchen Light");
         FourButtonsRemote fourButtonRemote = new FourButtonsRemote();
