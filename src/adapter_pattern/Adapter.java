@@ -2,22 +2,23 @@ package adapter_pattern;
 
 public class Adapter implements Target {
 
-    private final Adaptee a;
+    private final Adaptee adaptee;
 
-    public Adapter(Adaptee a)
+    public Adapter(Adaptee adaptee)
     {
-        this.a = a;
+        this.adaptee = adaptee;
     }
 
     @Override
-    public void request(XmlData xmlData) {
-        JsonData jsonData = convertXmlToJson(xmlData);
-        a.displayMenus(jsonData);
+    public void request(DataFormatForClient dataFormatForClient) {
+        DataFormatForAdaptee dataFormatForAdaptee = convertDataFormat(dataFormatForClient);
+        adaptee.requestOnAdaptee(dataFormatForAdaptee);
     }
 
 
-    private JsonData convertXmlToJson(XmlData xmlData) {
-        return new JsonData();
+    private DataFormatForAdaptee convertDataFormat(DataFormatForClient dataFormatForClient)
+    {
+        return new DataFormatForAdaptee();
     }
 
 }

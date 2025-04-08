@@ -2,7 +2,7 @@ package adapter_pattern;
 
 public interface Target {
 
-    void request(XmlData xmlData);
+    void request(DataFormatForClient dataFormatForClient);
 
 }
 

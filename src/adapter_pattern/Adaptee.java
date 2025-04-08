@@ -2,8 +2,9 @@ package adapter_pattern;
 
 public class Adaptee {
 
-    public void displayMenus(JsonData jsonData) {
-        System.out.println("Adaptee is here");
+    public void requestOnAdaptee(DataFormatForAdaptee dataFormatForAdaptee)
+    {
+        System.out.println("Working on Adaptee side using dataFormatForAdaptee.");
     }
 
 }
